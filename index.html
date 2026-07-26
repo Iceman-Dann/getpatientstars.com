@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PatientStars — Google Review Management for Dental Practices</title>
-  <meta name="description" content="PatientStars helps dental practices automatically respond to Google reviews with HIPAA-aware AI — and shows you where your practice ranks in local Google search." />
-  <meta name="robots" content="index, follow" />
+  <title>PatientStars — HIPAA Pre-Flight Review Guardrails for Dental Practices</title>
+  <meta name="description" content="Protect your dental practice from HIPAA violations and reputation risks with automated pre-flight review screening." />
+  <meta name="robots" content="noindex, follow" />
   <link rel="canonical" href="https://getpatientstars.com" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="PatientStars — Google Review Management for Dental Practices" />
-  <meta property="og:description" content="AI-assisted Google review responses built for dental practices. HIPAA-aware, one-click approval." />
+  <meta property="og:title" content="PatientStars — HIPAA Pre-Flight Review Guardrails" />
+  <meta property="og:description" content="AI-assisted review responses built specifically to safeguard patient privacy and practice reputation." />
   <meta property="og:url" content="https://getpatientstars.com" />
   <meta property="og:type" content="website" />
 
@@ -86,83 +86,70 @@
     .nav-cta:hover { background: #163b37; transform: scale(1.02); }
     .nav-cta:active { transform: scale(0.97); }
 
-    /* ── Problem-first opener ── */
-    .opener {
-      padding: 3rem 0 0;
-    }
+    /* ── Risk Opener ── */
+    .opener { padding: 3rem 0 0; }
+
     .problem-banner {
       background: var(--muted);
       border: 1px solid var(--border);
       border-radius: 1.25rem;
       padding: 1.5rem 1.75rem;
       margin-bottom: 1.5rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
+      display: flex; align-items: flex-start; gap: 1rem;
     }
+
     .problem-icon {
-      flex-shrink: 0;
-      width: 40px; height: 40px;
-      border-radius: 10px;
-      background: rgba(200,148,58,0.15);
-      display: flex; align-items: center; justify-content: center;
-      margin-top: 0.1rem;
+      flex-shrink: 0; width: 40px; height: 40px; border-radius: 10px;
+      background: rgba(30,77,71,0.12); display: flex; align-items: center;
+      justify-content: center; margin-top: 0.1rem;
     }
-    .problem-icon svg { color: var(--gold); }
-    .problem-text {
-      font-size: 0.92rem;
-      color: var(--muted-fg);
-      line-height: 1.65;
-    }
+
+    .problem-icon svg { color: var(--primary); }
+
+    .problem-text { font-size: 0.92rem; color: var(--muted-fg); line-height: 1.65; }
     .problem-text strong { color: var(--fg); font-weight: 700; }
 
-    /* ── Dan intro card ── */
+    /* ── Dan Card ── */
     .dan-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 1.25rem;
-      padding: 1.75rem;
-      margin-bottom: 2rem;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 1.25rem; padding: 1.75rem; margin-bottom: 2rem;
       box-shadow: 0 4px 18px -6px rgba(30,77,71,0.07);
     }
-    .dan-header {
-      display: flex; align-items: center; gap: 1rem; margin-bottom: 1.1rem;
-    }
+
+    .dan-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.1rem; }
+
     .dan-avatar {
       width: 56px; height: 56px; border-radius: 50%;
       object-fit: cover; border: 3px solid var(--gold);
-      box-shadow: 0 0 0 3px rgba(200,148,58,0.15);
-      flex-shrink: 0;
+      box-shadow: 0 0 0 3px rgba(200,148,58,0.15); flex-shrink: 0;
     }
+
     .dan-meta h2 {
       font-family: var(--serif); font-size: 1rem; font-weight: 700;
       color: var(--fg); margin-bottom: 0.15rem;
     }
+
     .dan-meta .dan-role { font-size: 0.75rem; color: var(--muted-fg); font-weight: 500; }
-    .dan-body p {
-      font-size: 0.92rem; color: var(--muted-fg); line-height: 1.68;
-    }
+
+    .dan-body p { font-size: 0.92rem; color: var(--muted-fg); line-height: 1.68; }
     .dan-body p + p { margin-top: 0.6rem; }
 
     /* ── Headline ── */
-    .headline-block {
-      text-align: center;
-      padding: 2rem 0 1.5rem;
-    }
+    .headline-block { text-align: center; padding: 2rem 0 1.5rem; }
+
     h1 {
-      font-family: var(--serif);
-      font-size: clamp(1.9rem, 5.5vw, 3rem);
-      font-weight: 700;
-      line-height: 1.1;
-      color: var(--fg);
-      letter-spacing: -0.02em;
-      margin-bottom: 1rem;
+      font-family: var(--serif); font-size: clamp(1.9rem, 5.5vw, 3rem);
+      font-weight: 700; line-height: 1.1; color: var(--fg);
+      letter-spacing: -0.02em; margin-bottom: 1rem;
     }
+
     h1 em { font-style: italic; color: var(--primary); }
+
     .headline-sub {
-      font-size: 1rem; color: var(--muted-fg);
-      max-width: 540px; margin: 0 auto 2rem; line-height: 1.68;
+      font-size: 1rem; color: var(--muted-fg); max-width: 540px;
+      margin: 0 auto 2rem; line-height: 1.68;
     }
+
     .btn-primary {
       display: inline-flex; align-items: center; gap: 0.5rem;
       background: var(--primary); color: var(--primary-fg);
@@ -171,37 +158,39 @@
       box-shadow: 0 4px 18px -4px rgba(30,77,71,0.35);
       transition: background 0.15s ease, transform 0.15s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.15s ease;
     }
+
     .btn-primary:hover { background: #163b37; transform: scale(1.03); box-shadow: 0 8px 28px -6px rgba(30,77,71,0.4); }
     .btn-primary:active { transform: scale(0.97); }
+
     .trust-row {
-      margin-top: 1rem;
-      display: flex; align-items: center; justify-content: center;
-      gap: 0.9rem; flex-wrap: wrap;
+      margin-top: 1rem; display: flex; align-items: center;
+      justify-content: center; gap: 0.9rem; flex-wrap: wrap;
       font-size: 0.72rem; font-weight: 600; color: var(--muted-fg);
     }
+
     .trust-item { display: flex; align-items: center; gap: 0.3rem; }
     .check { color: #2e7d57; }
 
-    /* ── What it does — two-column text ── */
+    /* ── Product Section (Compliance focus) ── */
     .product-section { margin-bottom: 2rem; }
+
     .section-label {
-      font-size: 0.65rem; font-weight: 700;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--muted-fg); margin-bottom: 0.5rem;
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--muted-fg); margin-bottom: 0.5rem;
     }
+
     .section-heading {
-      font-family: var(--serif);
-      font-size: clamp(1.3rem, 4vw, 1.65rem);
+      font-family: var(--serif); font-size: clamp(1.3rem, 4vw, 1.65rem);
       font-weight: 700; line-height: 1.2; color: var(--fg); margin-bottom: 0.85rem;
     }
+
     .section-heading em { font-style: italic; color: var(--primary); }
+
     .body-text { font-size: 0.93rem; color: var(--muted-fg); line-height: 1.7; }
     .body-text + .body-text { margin-top: 0.7rem; }
 
-    /* ── Feature list (horizontal pills) ── */
-    .feature-pills {
-      display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 1.25rem;
-    }
+    .feature-pills { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 1.25rem; }
+
     .pill {
       display: flex; align-items: center; gap: 0.5rem;
       background: var(--card); border: 1px solid var(--border);
@@ -209,69 +198,58 @@
       font-size: 0.8rem; font-weight: 600; color: var(--fg);
       transition: border-color 0.15s, background 0.15s;
     }
+
     .pill:hover { border-color: rgba(30,77,71,0.3); background: var(--teal-mid); }
     .pill svg { color: var(--primary); flex-shrink: 0; }
 
-    /* ── Why it matters — horizontal cards ── */
-    .why-section {
-      margin-bottom: 2rem;
-    }
-    .why-cards {
-      display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem;
-    }
+    /* ── Risk Cards ── */
+    .why-section { margin-bottom: 2rem; }
+
+    .why-cards { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem; }
+
     .why-card {
-      background: var(--primary);
-      border-radius: 1rem;
-      padding: 1.25rem 1.5rem;
-      display: flex; align-items: flex-start; gap: 1rem;
-      transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1);
+      background: var(--primary); border-radius: 1rem;
+      padding: 1.25rem 1.5rem; display: flex; align-items: flex-start;
+      gap: 1rem; transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1);
     }
+
     .why-card:hover { transform: translateX(4px); }
+
     .why-num {
-      flex-shrink: 0;
-      font-family: var(--serif);
-      font-size: 1.5rem; font-weight: 700;
-      color: rgba(200,148,58,0.5);
-      line-height: 1;
-      margin-top: 0.1rem;
-      min-width: 28px;
+      flex-shrink: 0; font-family: var(--serif);
+      font-size: 1.5rem; font-weight: 700; color: rgba(200,148,58,0.5);
+      line-height: 1; margin-top: 0.1rem; min-width: 28px;
     }
-    .why-card-body h3 {
-      font-size: 0.88rem; font-weight: 700;
-      color: var(--primary-fg); margin-bottom: 0.3rem;
-    }
-    .why-card-body p {
-      font-size: 0.8rem; color: rgba(247,243,236,0.75); line-height: 1.55;
-    }
+
+    .why-card-body h3 { font-size: 0.88rem; font-weight: 700; color: var(--primary-fg); margin-bottom: 0.3rem; }
+    .why-card-body p { font-size: 0.8rem; color: rgba(247,243,236,0.75); line-height: 1.55; }
 
     /* ── Bottom CTA ── */
     .cta-block {
       background: var(--card); border: 1px solid var(--border);
       border-radius: 1.25rem; padding: 2rem; text-align: center;
-      box-shadow: 0 4px 18px -6px rgba(30,77,71,0.07);
-      margin-bottom: 2.5rem;
+      box-shadow: 0 4px 18px -6px rgba(30,77,71,0.07); margin-bottom: 2.5rem;
     }
+
     .cta-block .section-heading { margin-bottom: 0.5rem; }
     .cta-block .body-text { margin-bottom: 1.5rem; max-width: 440px; margin-left: auto; margin-right: auto; }
 
     /* ── Footer ── */
     footer { border-top: 1px solid var(--border); padding: 1.5rem 0 2rem; }
+
     .footer-inner {
       max-width: 720px; margin: 0 auto; padding: 0 1.25rem;
       display: flex; flex-direction: column; align-items: center;
       gap: 0.5rem; text-align: center;
     }
+
     .footer-dan { display: flex; align-items: center; gap: 0.6rem; }
-    .footer-dan img {
-      width: 30px; height: 30px; border-radius: 50%;
-      object-fit: cover; border: 2px solid var(--gold);
-    }
+    .footer-dan img { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; border: 2px solid var(--gold); }
     .footer-name { font-weight: 700; font-size: 0.85rem; color: var(--fg); }
     .footer-email { font-size: 0.8rem; color: var(--primary); text-decoration: none; font-weight: 500; }
     .footer-email:hover { text-decoration: underline; }
     .footer-note { font-size: 0.72rem; color: var(--muted-fg); }
 
-    /* ── Fade-in ── */
     .fade-in {
       opacity: 0; transform: translateY(16px);
       transition: opacity 0.4s ease-out, transform 0.4s ease-out;
@@ -306,38 +284,33 @@
 
   <div class="container">
 
-    <!-- PROBLEM-FIRST OPENER -->
+    <!-- RISK OPENER -->
     <div class="opener fade-in" id="opener">
       <div class="problem-banner">
         <div class="problem-icon" aria-hidden="true">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
         <p class="problem-text">
-          <strong>Most dental practices get Google reviews and never respond to them.</strong>
-          That silence costs rankings, and it costs new patients — because people searching for a dentist
-          read how a practice treats its reviewers before they ever pick up the phone.
+          <strong>Responding to Google reviews without HIPAA pre-flight screening is a compliance liability.</strong>
+          A single accidental mention of a treatment date, patient name confirmation, or clinical detail in a public review response can trigger severe regulatory penalties.
         </p>
       </div>
 
       <!-- DAN CARD -->
       <div class="dan-card">
         <div class="dan-header">
-          <img src="assets/dan.jpg" alt="Dan, PatientStars" class="dan-avatar" />
+          <img src="assets/dan.jpg" alt="Dan" class="dan-avatar" />
           <div class="dan-meta">
             <h2>Hi, I'm Dan.</h2>
-            <div class="dan-role">Partnerships &amp; Outreach, PatientStars</div>
+            <div class="dan-role">Partnerships &amp; Practice Compliance Outreach</div>
           </div>
         </div>
         <div class="dan-body">
           <p>
-            I reach out to dental practices that I think would get real value out of PatientStars —
-            not as a pitch, but because I've seen the difference it makes when a practice actually
-            stays on top of its Google presence.
+            I connect with dental practice owners and managing partners regarding reputation security. Most practices handle negative or complex Google reviews on an ad-hoc basis, exposing themselves to inadvertent HIPAA disclosures.
           </p>
           <p>
-            I'll keep this short: PatientStars handles Google review responses automatically,
-            keeps everything HIPAA-aware, and tracks your local search ranking so you can see
-            what's actually moving. If that sounds useful, it's worth five minutes of your time.
+            PatientStars provides an automated compliance barrier: every review draft is scanned for Protected Health Information (PHI) before your team ever clicks publish.
           </p>
         </div>
       </div>
@@ -345,10 +318,9 @@
 
     <!-- HEADLINE + CTA -->
     <div class="headline-block fade-in" id="headline">
-      <h1>Respond to every review.<br /><em>Automatically.</em></h1>
+      <h1>Automated responses.<br /><em>100% HIPAA pre-flight safe.</em></h1>
       <p class="headline-sub">
-        PatientStars drafts HIPAA-aware responses to your Google reviews and tracks how
-        your practice ranks in local search — all in one place, built specifically for dental.
+        PatientStars safeguards your clinic's public Google profile with automated PHI detection, structured escalation protocols, and zero patient record access.
       </p>
       <a href="https://patientstars.com/signup" id="hero-cta-btn" class="btn-primary">
         See how it works
@@ -357,89 +329,76 @@
       <div class="trust-row" role="list">
         <span class="trust-item" role="listitem">
           <svg class="check" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-          HIPAA pre-flight screening
+          100% HIPAA Pre-Flight Screening
         </span>
         <span aria-hidden="true">·</span>
         <span class="trust-item" role="listitem">
           <svg class="check" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-          One-click approval
+          Zero Patient Record Access
         </span>
         <span aria-hidden="true">·</span>
         <span class="trust-item" role="listitem">
           <svg class="check" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-          No patient files accessed
+          Encrypted OAuth Protocol
         </span>
       </div>
     </div>
 
-    <!-- WHAT IT DOES -->
+    <!-- REPUTATION SAFETY & COMPLIANCE -->
     <section class="product-section fade-in" id="product" aria-labelledby="product-heading">
-      <div class="section-label">What PatientStars Does</div>
-      <h2 class="section-heading" id="product-heading">Two things, done <em>well.</em></h2>
+      <div class="section-label">Reputation Security</div>
+      <h2 class="section-heading" id="product-heading">Built to eliminate <em>compliance risk</em></h2>
       <p class="body-text">
-        PatientStars connects directly to your Google Business Profile via OAuth. When a patient
-        leaves a review, the AI writes a response — warm, professional, and scanned to make sure
-        nothing in it could run afoul of HIPAA. You get a notification, read the draft, and post
-        it with one click. That's it.
+        PatientStars connects exclusively to your public Google Business Profile via secure OAuth. It never accesses your PMS (Practice Management System), patient charts, or billing records.
       </p>
       <p class="body-text">
-        The second piece is local visibility tracking. PatientStars shows you how your practice
-        ranks on Google Maps across a grid of your surrounding area, updated on a regular schedule,
-        so you actually know whether your profile is performing — not just what your star rating is.
+        Before any draft response is presented for approval, our multi-pass PHI engine verifies that no clinical names, procedure types, or appointment acknowledgments are leaked into public search.
       </p>
 
-      <div class="feature-pills" role="list" aria-label="Key features">
+      <div class="feature-pills" role="list" aria-label="Security features">
         <span class="pill" role="listitem">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/></svg>
-          AI Review Drafts
-        </span>
-        <span class="pill" role="listitem">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
-          HIPAA Pre-Flight Scan
-        </span>
-        <span class="pill" role="listitem">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-          Local Map Grid Tracking
-        </span>
-        <span class="pill" role="listitem">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="m12 8 4 4-4 4"/></svg>
-          One-Click Approval
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          PHI Pre-Flight Filter
         </span>
         <span class="pill" role="listitem">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          Direct Google OAuth
+          Public Data Isolation
         </span>
         <span class="pill" role="listitem">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h18v18H3z" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-          Built Only for Dental
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          1-Click Human Clearance
+        </span>
+        <span class="pill" role="listitem">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+          Critical Review Escalation
         </span>
       </div>
     </section>
 
-    <!-- WHY IT MATTERS -->
+    <!-- PRACTICE RISK FACTORS -->
     <section class="why-section fade-in" id="why" aria-labelledby="why-heading">
-      <div class="section-label">Why This Matters</div>
-      <h2 class="section-heading" id="why-heading">Three ways an inactive<br /><em>Google profile costs you.</em></h2>
+      <div class="section-label">Risk Prevention</div>
+      <h2 class="section-heading" id="why-heading">Three compliance traps<br /><em>facing dental practices today.</em></h2>
       <div class="why-cards" role="list">
         <div class="why-card" role="listitem">
           <div class="why-num" aria-hidden="true">01</div>
           <div class="why-card-body">
-            <h3>Lower position in the local map pack</h3>
-            <p>Google uses review engagement as a local ranking factor. Practices that respond to reviews consistently tend to show up higher when someone nearby searches for a dentist.</p>
+            <h3>Accidental PHI Disclosure in Replies</h3>
+            <p>HHS enforcement actions have targeted dental practices for validating patient status in Google review replies. PatientStars strips all identifying health markers automatically.</p>
           </div>
         </div>
         <div class="why-card" role="listitem">
           <div class="why-num" aria-hidden="true">02</div>
           <div class="why-card-body">
-            <h3>Prospective patients move on</h3>
-            <p>When someone researching a new dental practice sees an unanswered review — especially a negative one — the silence reads as disinterest. They click to the next result.</p>
+            <h3>Emotional Staff Responses to Negative Reviews</h3>
+            <p>Frustrated front desk staff responding to unfair 1-star reviews can escalate disputes publicly. PatientStars provides calm, professional, neutral draft responses.</p>
           </div>
         </div>
         <div class="why-card" role="listitem">
           <div class="why-num" aria-hidden="true">03</div>
           <div class="why-card-body">
-            <h3>Manual responses create HIPAA risk</h3>
-            <p>Replying to reviews by hand — especially to upset patients — can accidentally surface protected health information. PatientStars scans every draft before it's ever visible to you.</p>
+            <h3>Third-Party Portal Data Leaks</h3>
+            <p>Many legacy reputation platforms require full access to your PMS database. PatientStars connects strictly via public Google OAuth — zero access to private records.</p>
           </div>
         </div>
       </div>
@@ -447,11 +406,10 @@
 
     <!-- BOTTOM CTA -->
     <div class="cta-block fade-in" id="bottom-cta">
-      <div class="section-label">Worth 5 minutes of your time</div>
-      <h2 class="section-heading">See how PatientStars<br /><em>works for your practice.</em></h2>
+      <div class="section-label">Safeguard your practice reputation</div>
+      <h2 class="section-heading">Test HIPAA pre-flight screening.</h2>
       <p class="body-text">
-        Connect your Google Business Profile and see exactly what PatientStars
-        would do with your real reviews. Takes about five minutes, no credit card needed.
+        Connect your Google Business Profile in 5 minutes to test automated review responses with 100% pre-flight safety screening.
       </p>
       <a href="https://patientstars.com/signup" id="bottom-cta-btn" class="btn-primary">
         See how it works
@@ -466,7 +424,7 @@
     <div class="footer-inner">
       <div class="footer-dan">
         <img src="assets/dan.jpg" alt="Dan" />
-        <span class="footer-name">Dan — PatientStars</span>
+        <span class="footer-name">Dan — Partnerships &amp; Compliance, PatientStars</span>
       </div>
       <a href="mailto:dan@getpatientstars.com" class="footer-email">dan@getpatientstars.com</a>
       <p class="footer-note">Part of the PatientStars team &mdash; <a href="https://patientstars.com" style="color: var(--primary); font-weight: 600;">patientstars.com</a></p>
